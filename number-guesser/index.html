@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guess the Number!!</title>
 
+    <link rel="stylesheet" href="./assets/css/daisy-ui.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 
     <script src="./assets/js/tailwind.js"></script>
@@ -14,8 +15,27 @@
 
 <body>
 
-    <main>
+    <main class="h-screen max-w-[100%] bg-gray-200 flex justify-center items-center">
+        <div class="w-[700px] m-4 p-4 bg-white rounded-lg mt-[-100px] max-w-[100%] pb-20 pt-10">
+            <h2 class="text-2xl text-center bg-green-200 py-4 w-[300px] max-w-[100%] mx-auto">
+                Guess the Number!!
+            </h2>
 
+            <div class="game-box mt-10 flex justify-center">
+                <button id="startGame" class="btn btn-success text-white mx-auto hidden">Start Game</button>
+
+                <div class="guess-box flex flex-col items-center gap-2">
+                    <div class="tries-left text-gray-500">
+                        You have <span id="left" class="font-bold">3</span> tries left
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <p class="text-xl">Your Guess? :</p>
+                        <input type="text" class="input input-bordered max-w-[100px]">
+                    </div>
+                    <button id="makeGuess" class="btn btn-sm text-white mx-auto">Check</button>
+                </div>
+            </div>
+        </div>
     </main>
 
     <script src="./assets/js/script.js"></script>
